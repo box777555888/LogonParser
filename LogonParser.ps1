@@ -171,7 +171,7 @@ function Get-LogonEvents {
             $logonId = $superLogonEvent.Properties[3].Value.ToString("X")
             $sentence = "{0} Session: {1} Superuser logon: {2}\{3}" -f $timeCreated,$logonId,$domain,$username
             $sentences += $sentence
-            $timestamps += $successEvent.TimeCreated
+            $timestamps += $superLogonEvent.TimeCreated
         }
 
     }
